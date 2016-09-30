@@ -1,15 +1,15 @@
 # Set the base image to Ubuntu
-FROM    ubuntu
+FROM node:0.10-onbuild
 
 # File Author / Maintainer
 MAINTAINER Mukta Aphale aMukta@gmail.com
 
 # Install Node.js and other dependencies
-RUN apt-get update
-RUN apt-get -y install curl 
-RUN curl -sL https://deb.nodesource.com/setup | bash -
-RUN    apt-get -y install python build-essential nodejs
-RUN apt-get install -y npm
+#RUN apt-get update
+#RUN apt-get -y install curl 
+#RUN curl -sL https://deb.nodesource.com/setup | bash -
+#RUN    apt-get -y install python build-essential nodejs
+#RUN apt-get install -y npm
 
 # Install nodemon
 RUN npm install -g nodemon
